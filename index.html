@@ -137,10 +137,94 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
+        /* --- ESTILO DO AGE GATE (+18) --- */
+.age-gate-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(11, 12, 16, 0.98); /* Fundo quase todo preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Garante que fica na frente de tudo */
+    backdrop-filter: blur(8px); /* Efeito de desfoque no fundo */
+}
+
+.age-gate-box {
+    background: #1f2833; /* Fundo cinza escuro igual ao site */
+    border: 2px solid #ff4757; /* Borda vermelha de alerta */
+    color: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.age-gate-box h2 {
+    color: #ff4757;
+    margin-top: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.age-gate-box p {
+    color: #c5c6c7;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.age-gate-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.age-btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.age-btn-accept {
+    background: #ff4757;
+    color: white;
+}
+
+.age-btn-accept:hover {
+    background: #ff6b81;
+    transform: scale(1.05);
+}
+
+.age-btn-leave {
+    background: #45f3ff;
+    color: #0b0c10;
+}
+
+.age-btn-leave:hover {
+    background: #32c5cf;
+    transform: scale(1.05);
+}
     </style>
 </head>
 <body>
-
+    <!-- Janela de Verificação de Idade +18 -->
+<div id="age-gate" class="age-gate-overlay">
+    <div class="age-gate-box">
+        <h2>Conteúdo Adulto</h2>
+        <p>Este site contém análises e links de ferramentas de Inteligência Artificial destinadas estritamente a maiores de 18 anos.</p>
+        <div class="age-gate-buttons">
+            <button class="age-btn age-btn-accept" onclick="acceptAge()">Sou maior de 18 anos</button>
+            <button class="age-btn age-btn-leave" onclick="leaveSite()">Sair</button>
+        </div>
+    </div>
+</div>
+    
     <div class="container">
         <header>
             <h1>SexyAI.com.br</h1>
@@ -238,6 +322,24 @@
             <p>&copy; 2026 SexyAI. Todos os direitos reservados.</p>
         </footer>
     </div>
+<script>
+    // Função para salvar o cookie e liberar o acesso
+    function acceptAge() {
+        // Salva que o usuário passou por 30 dias
+        document.cookie = "age_verified=true; max-age=2592000; path=/";
+        document.getElementById('age-gate').style.display = 'none';
+    }
+
+    // Função caso o usuário clique em Sair
+    function leaveSite() {
+        window.location.href = "https://google.com.br";
+    }
+
+    // Verifica se o usuário já aceitou antes para não exibir o aviso de novo
+    if (document.cookie.includes("age_verified=true")) {
+        document.getElementById('age-gate').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
