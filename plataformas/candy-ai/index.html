@@ -26,6 +26,7 @@
   <style>
     :root{--bg:#09080d;--panel:#121019;--panel2:#191521;--text:#f8f5fb;--muted:#aaa3b4;--line:rgba(255,255,255,.09);--pink:#fa4b9b;--violet:#a56cff;--max:1040px}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:radial-gradient(ellipse at 78% -8%,rgba(137,68,181,.2),transparent 38%),var(--bg);color:var(--text);font:16px/1.7 Arial,Helvetica,sans-serif}a{color:#ff9bc7;text-underline-offset:3px}a:hover{color:#fff}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(9,8,13,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font:800 1.45rem Arial,Helvetica,sans-serif;letter-spacing:-.07em;color:var(--text);text-decoration:none}.logo span{color:var(--pink)}.navlinks{display:flex;align-items:center;gap:22px;font-size:.9rem}.navlinks a,.crumbs a{color:#c9c2d0}.navlinks a:hover,.crumbs a:hover{color:#fff}.hero{padding:76px 0 38px}.crumbs{font-size:.82rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}.eyebrow{color:#f28bc0;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(250px,.75fr);gap:42px;align-items:center}.hero h1{font-size:clamp(2.55rem,6vw,4.6rem);line-height:1.04;letter-spacing:-.065em;margin:14px 0 20px}.gradient{background:linear-gradient(100deg,#ff8cbd,#bd8aff);-webkit-background-clip:text;background-clip:text;color:transparent}.lede{color:#c5bdcd;font-size:1.08rem;max-width:680px}.hero-art{margin:0;padding:12px;border:1px solid rgba(255,255,255,.12);border-radius:23px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));box-shadow:0 24px 70px #0008}.hero-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:15px}.hero-art figcaption{padding:10px 5px 2px;color:var(--muted);font-size:.77rem}.meta-note{color:#938a9d;font-size:.8rem;margin-top:16px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 20px;background:linear-gradient(110deg,var(--pink),#bd5cff);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(231,66,157,.2);cursor:pointer}.btn[aria-disabled="true"]{cursor:not-allowed;opacity:.72}.affiliate-note{margin:4px 0 0;color:#c9c0ce;font-size:.82rem;max-width:640px}.section{padding:50px 0;border-top:1px solid var(--line)}h2{font-size:clamp(1.65rem,3.6vw,2.35rem);line-height:1.15;letter-spacing:-.045em;margin:0 0 18px}h3{font-size:1.08rem;line-height:1.3;letter-spacing:-.02em}.section p,.section li{color:var(--muted)}.section p{max-width:800px}.callout{padding:18px 20px;border:1px solid rgba(165,108,255,.2);background:rgba(165,108,255,.06);border-radius:15px;margin:24px 0;color:#d3ccdc}.callout strong{color:#fff}.grid-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{padding:22px;border-radius:17px;background:var(--panel);border:1px solid var(--line)}.panel h3{margin:0 0 9px}.panel p:last-child{margin-bottom:0}.status{display:inline-block;margin-bottom:10px;padding:4px 9px;border:1px solid rgba(250,75,155,.25);border-radius:99px;color:#ffabd0;font-size:.72rem;font-weight:700;letter-spacing:.04em}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:22px 0}.facts{width:100%;border-collapse:collapse;min-width:560px;background:var(--panel)}.facts th,.facts td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.facts th{color:#fff;font-size:.88rem;background:#191521}.facts td{color:var(--muted);font-size:.9rem}.facts tr:last-child td{border-bottom:0}.fine{font-size:.83rem;color:#91899a!important}.faq{display:grid;gap:11px}.faq details{border:1px solid var(--line);border-radius:13px;background:var(--panel);padding:16px 18px}.faq summary{font-weight:700;cursor:pointer}.faq details p{margin:10px 0 0}.sources{padding-left:22px}.sources li{padding:0 0 16px}.sources a{overflow-wrap:anywhere}.sources small{display:block;color:#91899a}.footer{border-top:1px solid var(--line);padding:35px 0 28px;color:#8f8798;font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-links{display:flex;gap:14px 18px;flex-wrap:wrap;align-items:center}.privacy-link{background:none;border:0;color:#ff9bc7;text-decoration:underline;cursor:pointer;padding:0;font:inherit}.cookie-banner{position:fixed;z-index:110;left:20px;right:20px;bottom:20px;max-width:760px;margin:auto;padding:22px;background:#17131f;border:1px solid rgba(255,255,255,.18);border-radius:18px;box-shadow:0 18px 70px #000b;display:none}.cookie-banner p{color:#c4bdcc;font-size:.88rem;margin:8px 0 16px}.cookie-actions{display:flex;gap:9px;flex-wrap:wrap}.cookie-actions button{border-radius:999px;padding:10px 15px;border:1px solid var(--line);cursor:pointer;font-weight:700;font-size:.82rem}.cookie-primary{background:linear-gradient(110deg,var(--pink),#bd5cff);color:#fff;border:0!important}.cookie-secondary{background:transparent;color:#eee}.cookie-settings{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:#ddd}.cookie-settings label{display:flex;gap:10px;align-items:center;margin:8px 0;font-size:.86rem}.cookie-settings input{accent-color:#e64a9d}.age-gate{position:fixed;inset:0;background:rgba(4,3,7,.92);backdrop-filter:blur(14px);z-index:120;display:none;place-items:center;padding:20px}.age-box{width:min(440px,100%);text-align:center;padding:30px;border:1px solid var(--line);border-radius:22px;background:#15111c;box-shadow:0 25px 90px #000}.age-box h2{font-size:1.65rem;margin:10px 0}.age-box p{color:var(--muted);font-size:.9rem}.age-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}.age-actions button{padding:11px 17px;border-radius:999px;border:1px solid var(--line);cursor:pointer}.age-yes{background:linear-gradient(110deg,var(--pink),#bd5cff);color:#fff;border:0!important;font-weight:700}.age-no{background:transparent;color:#ddd}
+    .hero-subheadline{margin:-6px 0 16px;color:#eee4f2;font-size:clamp(1.15rem,2.6vw,1.55rem);font-weight:600;line-height:1.35;max-width:680px}
     .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
     .video-card{min-width:0;padding:12px;border:1px solid rgba(255,255,255,.12);border-radius:19px;background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));box-shadow:0 18px 50px rgba(0,0,0,.24)}
     .video-frame{width:min(100%,340px);margin:auto;aspect-ratio:3/4;overflow:hidden;border-radius:13px;background:#050507}
@@ -51,9 +52,10 @@
         <div class="hero-grid">
           <div>
             <div class="eyebrow">Perfil de plataforma · Conteúdo 18+</div>
-            <h1 id="page-title">Candy.ai: <span class="gradient">o que saber</span> antes de usar</h1>
-            <p class="lede">Um guia documental sobre a companhia virtual com IA da Candy.ai: o que a empresa anuncia, o que seus documentos explicam e o que ainda não foi verificado de forma independente.</p>
-            <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Acessar Candy.ai ↗</a></p>
+            <h1 id="page-title">Candy.ai: <span class="gradient">a imaginação dá o primeiro passo.</span></h1>
+            <p class="hero-subheadline">Algumas conversas começam com curiosidade. Outras despertam muito mais.</p>
+            <p class="lede">Descubra o universo de personagens virtuais da Candy.ai e conheça os recursos que a plataforma anuncia. O SexyAI mostra o que está documentado — e o que ainda não verificamos.</p>
+            <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Descubra a Candy.ai ↗</a></p>
             <p class="affiliate-note">Link de afiliado: o SexyAI pode receber comissão.</p>
             <p id="affiliateStatus" class="fine" aria-live="polite">O destino afiliado só é ativado depois da confirmação de maioridade neste navegador.</p>
             <noscript><p class="callout">JavaScript está desativado. As informações desta página continuam disponíveis, mas o link afiliado permanece inativo; não há destino navegável sem a confirmação 18+.</p></noscript>
@@ -67,8 +69,8 @@
     <section class="section" id="candy-em-acao" aria-labelledby="videos-title">
       <div class="wrap">
         <div class="eyebrow">Experiência visual</div>
-        <h2 id="videos-title">Candy.ai em ação</h2>
-        <p class="video-note">Conheça alguns exemplos visuais do universo de personagens da Candy.ai.</p>
+        <h2 id="videos-title">Escolha com os olhos. Descubra na conversa.</h2>
+        <p class="video-note">Um vislumbre dos personagens e estilos associados à Candy.ai. Os vídeos apresentam o universo visual da plataforma, não uma demonstração de funcionamento.</p>
         <noscript><p class="video-note">Para carregar os vídeos, habilite JavaScript e confirme a maioridade. Nenhum arquivo ou quadro dos vídeos é carregado antes disso.</p></noscript>
         <div class="video-grid">
           <article class="video-card"><div class="video-frame"><video controls playsinline preload="none" aria-label="Vídeo 1" data-video-src="/plataformas/candy-ai/media/candy_video_1.mp4">Seu navegador não oferece suporte à reprodução deste vídeo.</video></div><p class="video-caption">Estilo realista</p></article>
@@ -80,7 +82,7 @@
 
     <section class="section" id="sobre">
       <div class="wrap">
-        <h2>O que é a Candy.ai?</h2>
+        <h2>Tudo começa com um simples oi...</h2>
         <p>A Candy.ai se apresenta como um serviço online de interação com personagens de inteligência artificial. Seus materiais descrevem conversas com personagens ficcionais e geração ou troca de conteúdo em diferentes formatos. Essa descrição resume o que a própria empresa informa; não é uma avaliação de desempenho feita pelo SexyAI.</p>
         <div class="callout"><strong>Como ler esta página:</strong> “declarado pela empresa” indica conteúdo de páginas promocionais ou de suporte; “documentado” indica termos, aviso de privacidade ou política publicados; “não confirmado” aponta informação que não foi possível estabelecer a partir das fontes consultadas; “não testado” significa que o SexyAI não usou o recurso em primeira mão.</div>
         <div class="grid-two">
@@ -92,7 +94,7 @@
 
     <section class="section" id="recursos">
       <div class="wrap">
-        <h2>Recursos descritos nas fontes oficiais</h2>
+        <h2>O que existe por trás da imaginação?</h2>
         <div class="table-wrap"><table class="facts"><thead><tr><th scope="col">Recurso</th><th scope="col">O que a documentação consultada indica</th><th scope="col">Status editorial</th></tr></thead><tbody>
           <tr><td>Chat com personagens</td><td>A empresa descreve conversas online com personagens de IA; seus documentos de suporte diferenciam limites de usuários gratuitos e pagos.</td><td>Declarado/documentado; não testado</td></tr>
           <tr><td>Personagens personalizados</td><td>Materiais oficiais mencionam criação ou personalização de companheiros/personagens; certos usos podem consumir tokens.</td><td>Declarado; regras e limites podem variar</td></tr>
@@ -106,7 +108,7 @@
 
     <section class="section" id="planos">
       <div class="wrap">
-        <h2>Planos, cobrança e tokens</h2>
+        <h2>Antes de se envolver, conheça as condições.</h2>
         <p>A página oficial de assinaturas consultada exibia ofertas com valores apresentados pelo símbolo “$”. Como não foi identificado nessa tela um código explícito de moeda, não convertemos os valores para reais nem presumimos a moeda da cobrança. Preços, promoções, impostos e opções podem variar conforme localidade e checkout.</p>
         <div class="table-wrap"><table class="facts"><thead><tr><th scope="col">Oferta exibida na consulta</th><th scope="col">Valor mostrado</th><th scope="col">Observação</th></tr></thead><tbody>
           <tr><td>12 meses</td><td>$3,99 por mês; total exibido $47,88</td><td>Apresentado como cobrança do período anual</td></tr>
@@ -121,7 +123,7 @@
 
     <section class="section" id="idioma">
       <div class="wrap">
-        <h2>Português e idiomas</h2>
+        <h2>A conversa também acontece em português?</h2>
         <p>Um artigo oficial de suporte consultado informa que português não é uma localização oficial da interface. O artigo lista inglês, francês, alemão e espanhol como idiomas de interface e diz que a IA pode tentar responder em português, com qualidade e consistência variáveis. A página promocional e o artigo de suporte não apresentam a informação de idioma da mesma forma; por isso, trate o suporte a português como limitado e confirme a interface atual antes de criar uma conta.</p>
         <p class="fine">Não testamos conversas em português nem medimos a qualidade das respostas.</p>
       </div>
@@ -138,7 +140,7 @@
 
     <section class="section" id="privacidade">
       <div class="wrap">
-        <h2>Privacidade e tratamento de dados</h2>
+        <h2>Algumas coisas merecem ficar em segredo. E seus dados?</h2>
         <p>O aviso de privacidade identifica a EverAI Ltd, registrada em Malta, como responsável pelo tratamento. O documento descreve dados de conta, conversas, prompts, respostas, preferências, endereço IP e localização entre as categorias que podem ser tratadas. Também informa que fornecedores de modelos de linguagem e hospedagem podem receber conteúdo de conversas para prestar o serviço.</p>
         <p>A política afirma que interações desidentificadas ou agregadas podem ser usadas para melhoria do serviço/modelos e que pode haver revisão humana de interações desidentificadas. Ela descreve prazos diferentes por categoria de dado — incluindo períodos para dados de conta, logs e registros financeiros — com exceções previstas no próprio aviso. Consulte o documento integral para escopo, bases legais, direitos e atualizações.</p>
         <div class="callout"><strong>Ponto de atenção:</strong> conversas com serviços de IA podem conter informações pessoais. Leia os avisos oficiais antes de compartilhar dados sensíveis. Os termos também concedem à empresa uma licença ampla sobre conteúdo enviado para finalidades relacionadas ao serviço, desenvolvimento e treinamento, conforme as condições do documento. O SexyAI não auditou sistemas internos nem verificou independentemente essas práticas.</div>
@@ -147,7 +149,7 @@
 
     <section class="section" id="atencao">
       <div class="wrap">
-        <h2>O que conferir antes de usar</h2>
+        <h2>Antes de dar o próximo passo...</h2>
         <ul>
           <li>A Candy.ai é destinada a adultos; os termos exigem 18 anos ou a maioridade aplicável. Os termos consultados listam China e Singapura entre as localidades excluídas; outras limitações locais podem existir.</li>
           <li>O símbolo de preço consultado não bastou para confirmar a moeda da cobrança. Confira o total e a moeda no checkout.</li>
@@ -161,7 +163,7 @@
 
     <section class="section" id="faq">
       <div class="wrap">
-        <h2>Perguntas frequentes</h2>
+        <h2>Ainda tem algo despertando sua curiosidade?</h2>
         <div class="faq">
           <details><summary>A Candy.ai tem interface em português?</summary><p>Segundo o artigo oficial de suporte consultado, português não é uma localização oficial da interface. A IA pode tentar responder em português, mas a empresa ressalva que a qualidade pode variar. Não testamos esse recurso.</p></details>
           <details><summary>Quais são os preços?</summary><p>A página de assinaturas mostrava valores com símbolo “$” para períodos mensal, trimestral e anual, além de outras periodicidades no resumo. A moeda não ficou explicitamente identificada na tela consultada; os valores podem variar. Confirme o preço final no site oficial.</p></details>
@@ -196,8 +198,8 @@
     </section>
     <section class="section" id="cta" aria-labelledby="cta-title">
       <div class="wrap">
-        <h2 id="cta-title">Acessar Candy.ai</h2>
-        <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Acessar Candy.ai ↗</a></p>
+        <h2 id="cta-title">A curiosidade trouxe você até aqui. E agora?</h2>
+        <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Explore a Candy.ai ↗</a></p>
       </div>
     </section>
   </main>
