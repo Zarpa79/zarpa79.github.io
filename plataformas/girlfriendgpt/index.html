@@ -41,6 +41,8 @@
         <div class="eyebrow">Perfil de plataforma · Conteúdo 18+</div>
         <h1 id="page-title">GirlfriendGPT: <span class="gradient">recursos e condições</span></h1>
         <p class="lede">Um guia documental sobre personagens, chat, geração de imagens, voz, créditos e privacidade. As funcionalidades são apresentadas como declarações da empresa; o SexyAI não testou o serviço.</p>
+        <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="girlfriend-gpt" data-affiliate-href="https://t.vlmai-5.com/426715/7477?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Visitar GirlfriendGPT ↗</a></p>
+        <p class="affiliate-note">Link afiliado; o SexyAI pode receber comissão.</p>
         <p class="meta-note">Fontes oficiais consultadas em <time datetime="2026-11-13">13/11/2026</time>. Não houve cadastro, compra ou teste prático.</p>
       </div><figure class="hero-art"><img src="/gptgirlfriend.webp" alt="Imagem do GirlfriendGPT usada no catálogo do SexyAI" width="600" height="338" fetchpriority="high"><figcaption>Imagem já utilizada no catálogo SexyAI; não representa teste ou validação independente.</figcaption></figure></div></section>
     </div>
@@ -134,15 +136,15 @@
   <section class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieTitle" aria-describedby="cookieText"><div class="eyebrow">Privacidade e transparência</div><h3 id="cookieTitle">Você escolhe como seus dados são utilizados.</h3><p id="cookieText">O armazenamento essencial mantém funções básicas; a análise é opcional e só será ativada com sua autorização. Consulte a <a href="/politica-de-cookies.html">Política de Cookies</a> e a <a href="/politica-de-privacidade.html">Política de Privacidade</a>.</p><div class="cookie-actions"><button class="cookie-primary" id="acceptAll" type="button">Aceitar análise</button><button class="cookie-secondary" id="rejectOptional" type="button">Rejeitar análise</button><button class="cookie-secondary" id="customizeCookies" type="button">Configurar</button></div><div class="cookie-settings" id="cookieSettings"><label><input type="checkbox" checked disabled> Essenciais — necessários ao funcionamento</label><label><input type="checkbox" id="analyticsConsent"> Análise — métricas de utilização (opcional)</label><div class="cookie-actions"><button class="cookie-primary" id="saveCookiePrefs" type="button">Salvar preferências</button></div></div></section>
   <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle"><div class="age-box"><div class="eyebrow">Acesso restrito</div><h2 id="ageTitle">Você tem 18 anos ou mais?</h2><p>Esta página apresenta um serviço destinado a adultos. Ao continuar, você declara ter pelo menos 18 anos ou a maioridade legal em sua região.</p><div class="age-actions"><button class="age-yes" id="ageYes" type="button">Sim, tenho 18+</button><button class="age-no" id="ageNo" type="button">Não tenho</button></div></div></div>
   <script>
-    const affiliateLink=document.getElementById('affiliateCta');
+    const affiliateLinks=document.querySelectorAll('a[data-affiliate]');
     const affiliateStatus=document.getElementById('affiliateStatus');
     const ageGate=document.getElementById('ageGate');
-    function activateAffiliateLink(){affiliateLink.setAttribute('href',affiliateLink.dataset.affiliateHref);affiliateLink.removeAttribute('aria-disabled');affiliateLink.removeAttribute('tabindex');affiliateStatus.textContent='Maioridade confirmada nesta sessão. O link afiliado está disponível.'}
+    function activateAffiliateLinks(){affiliateLinks.forEach(link=>{link.setAttribute('href',link.dataset.affiliateHref);link.removeAttribute('aria-disabled');link.removeAttribute('tabindex')});affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.'}
     function activateGalleryImages(){document.querySelectorAll('.gallery-frame img[data-image-src]').forEach(image=>{if(image.hasAttribute('src'))return;image.setAttribute('src',image.dataset.imageSrc);image.loading='lazy'})}
     let ageConfirmed=false;
     try{ageConfirmed=sessionStorage.getItem('sexyai_age_confirmed')==='yes';if(!ageConfirmed)ageGate.style.display='grid'}catch{ageGate.style.display='grid'}
-    if(ageConfirmed){activateAffiliateLink();activateGalleryImages()}
-    document.getElementById('ageYes').addEventListener('click',()=>{try{sessionStorage.setItem('sexyai_age_confirmed','yes')}catch{}ageGate.style.display='none';activateAffiliateLink();activateGalleryImages()});
+    if(ageConfirmed){activateAffiliateLinks();activateGalleryImages()}
+    document.getElementById('ageYes').addEventListener('click',()=>{try{sessionStorage.setItem('sexyai_age_confirmed','yes')}catch{}ageGate.style.display='none';activateAffiliateLinks();activateGalleryImages()});
     document.getElementById('ageNo').addEventListener('click',()=>window.location.replace('https://www.google.com/'));
     document.addEventListener('click',event=>{const link=event.target.closest('a[data-affiliate]');if(!link||!link.hasAttribute('href'))return;window.dispatchEvent(new CustomEvent('sexyai:affiliate-click',{detail:{platform:link.dataset.affiliate,linkType:'affiliate'}}))});
     // O GA4 só é carregado após consentimento válido para análise.

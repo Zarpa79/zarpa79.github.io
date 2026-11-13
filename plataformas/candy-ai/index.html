@@ -194,6 +194,12 @@
         <p class="fine">Não houve teste prático, cadastro, compra ou acesso a conteúdo protegido. Recursos, preços, termos e disponibilidade podem mudar após a data de consulta. Verifique as fontes oficiais antes de tomar uma decisão.</p>
       </div>
     </section>
+    <section class="section" id="cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title">Acessar Candy.ai</h2>
+        <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Acessar Candy.ai ↗</a></p>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="wrap footer-inner">
@@ -211,14 +217,16 @@
     <div class="age-box"><div class="eyebrow">Acesso restrito</div><h2 id="ageTitle">Você tem 18 anos ou mais?</h2><p>Esta página inclui um link para um serviço destinado a adultos. Ao continuar, você declara ter pelo menos 18 anos ou a maioridade legal em sua região.</p><div class="age-actions"><button class="age-yes" id="ageYes" type="button">Sim, tenho 18+</button><button class="age-no" id="ageNo" type="button">Não tenho</button></div></div>
   </div>
   <script>
-    const affiliateLink=document.getElementById('affiliateCta');
+    const affiliateLinks=document.querySelectorAll('a[data-affiliate]');
     const affiliateStatus=document.getElementById('affiliateStatus');
     const ageGate=document.getElementById('ageGate');
-    function activateAffiliateLink(){
-      affiliateLink.setAttribute('href',affiliateLink.dataset.affiliateHref);
-      affiliateLink.removeAttribute('aria-disabled');
-      affiliateLink.removeAttribute('tabindex');
-      affiliateStatus.textContent='Maioridade confirmada nesta sessão. O link afiliado está disponível.';
+    function activateAffiliateLinks(){
+      affiliateLinks.forEach(link=>{
+        link.setAttribute('href',link.dataset.affiliateHref);
+        link.removeAttribute('aria-disabled');
+        link.removeAttribute('tabindex');
+      });
+      affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.';
     }
     function activateGalleryVideos(){
       document.querySelectorAll('.video-frame video[data-video-src]').forEach(video=>{
@@ -229,11 +237,11 @@
     }
     let ageConfirmed=false;
     try{ageConfirmed=sessionStorage.getItem('sexyai_age_confirmed')==='yes';if(!ageConfirmed)ageGate.style.display='grid'}catch{ageGate.style.display='grid'}
-    if(ageConfirmed){activateAffiliateLink();activateGalleryVideos()}
+    if(ageConfirmed){activateAffiliateLinks();activateGalleryVideos()}
     document.getElementById('ageYes').addEventListener('click',()=>{
       try{sessionStorage.setItem('sexyai_age_confirmed','yes')}catch{}
       ageGate.style.display='none';
-      activateAffiliateLink();
+      activateAffiliateLinks();
       activateGalleryVideos();
     });
     document.getElementById('ageNo').addEventListener('click',()=>window.location.replace('https://www.google.com/'));
