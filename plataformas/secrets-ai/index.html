@@ -51,6 +51,7 @@
         <p class="lede">Entre personagens virtuais, conversas e Moments, descubra o universo que a Secrets.ai apresenta. Conheça os recursos anunciados, os limites documentados e tudo o que vale saber antes de explorar.</p>
         <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="secrets-ai" data-affiliate-href="https://t.vlmai-5.com/426715/10406/0?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Desvende a Secrets.ai <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
         <p class="affiliate-note">Link de afiliado*</p>
+        <p class="affiliate-note" id="affiliateStatus" role="status" aria-live="polite" hidden></p>
         <noscript><p class="callout">JavaScript está desativado. O conteúdo permanece disponível, mas o link afiliado não é ativado sem a confirmação 18+.</p></noscript>
       </div><figure class="hero-art"><img src="/secrets.webp" alt="Imagem ilustrativa identificada no catálogo SexyAI como Secrets.ai" width="1200" height="675" fetchpriority="high"><figcaption>Imagem já utilizada no catálogo SexyAI; não representa teste ou validação independente.</figcaption></figure></div></section>
     </div>
@@ -166,7 +167,7 @@
     const affiliateLinks=document.querySelectorAll('a[data-affiliate]');
     const affiliateStatus=document.getElementById('affiliateStatus');
     const ageGate=document.getElementById('ageGate');
-    function activateAffiliateLinks(){affiliateLinks.forEach(link=>{link.setAttribute('href',link.dataset.affiliateHref);link.removeAttribute('aria-disabled');link.removeAttribute('tabindex')});affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.'}
+    function activateAffiliateLinks(){affiliateLinks.forEach(link=>{link.setAttribute('href',link.dataset.affiliateHref);link.removeAttribute('aria-disabled');link.removeAttribute('tabindex')});affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.';affiliateStatus.hidden=false}
     function activateGalleryVideos(){document.querySelectorAll('.video-frame video[data-video-src]').forEach(video=>{if(video.hasAttribute('src'))return;video.setAttribute('src',video.dataset.videoSrc);video.load()})}
     let ageConfirmed=false;
     try{ageConfirmed=sessionStorage.getItem('sexyai_age_confirmed')==='yes';if(!ageConfirmed)ageGate.style.display='grid'}catch{ageGate.style.display='grid'}

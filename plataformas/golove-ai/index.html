@@ -40,6 +40,7 @@
       <p class="lede">Explore personagens virtuais e descubra as possibilidades de conversa apresentadas pela GoLove AI. Conheça os recursos anunciados, as condições de acesso e o que os documentos oficiais esclarecem antes de começar. O SexyAI não testou a plataforma.</p>
       <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="golove-ai" data-affiliate-href="https://t.vlmai-5.com/426715/8261?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Comece a descobrir a GoLove AI <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       <p class="affiliate-note">Link de afiliado*</p>
+      <p class="affiliate-note" id="affiliateStatus" role="status" aria-live="polite" hidden></p>
     </div></div></section>
   </div>
 
@@ -132,7 +133,7 @@
     const affiliateLinks=document.querySelectorAll('a[data-affiliate]');
     const affiliateStatus=document.getElementById('affiliateStatus');
     const ageGate=document.getElementById('ageGate');
-    function activateAffiliateLinks(){affiliateLinks.forEach(link=>{link.setAttribute('href',link.dataset.affiliateHref);link.removeAttribute('aria-disabled');link.removeAttribute('tabindex')});affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.'}
+    function activateAffiliateLinks(){affiliateLinks.forEach(link=>{link.setAttribute('href',link.dataset.affiliateHref);link.removeAttribute('aria-disabled');link.removeAttribute('tabindex')});affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.';affiliateStatus.hidden=false}
     function activateGalleryMedia(){document.querySelectorAll('.video-frame video[data-video-src]').forEach(video=>{if(video.hasAttribute('src'))return;video.setAttribute('src',video.dataset.videoSrc);video.load()});document.querySelectorAll('img[data-image-src]').forEach(image=>{if(image.hasAttribute('src'))return;image.setAttribute('src',image.dataset.imageSrc)})}
     let ageConfirmed=false;try{ageConfirmed=sessionStorage.getItem('sexyai_age_confirmed')==='yes';if(!ageConfirmed)ageGate.style.display='grid'}catch{ageGate.style.display='grid'}
     if(ageConfirmed){activateAffiliateLinks();activateGalleryMedia()}
