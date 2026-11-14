@@ -58,6 +58,7 @@
             <p class="lede">Descubra o universo de personagens virtuais da Candy.ai e conheça os recursos que a plataforma anuncia. O SexyAI mostra o que está documentado — e o que ainda não verificamos.</p>
             <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Descubra a Candy.ai <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
             <p class="affiliate-note">Link de afiliado*</p>
+            <p class="affiliate-note" id="affiliateStatus" role="status" aria-live="polite" hidden></p>
             <noscript><p class="callout">JavaScript está desativado. As informações desta página continuam disponíveis, mas o link afiliado permanece inativo; não há destino navegável sem a confirmação 18+.</p></noscript>
           </div>
           <figure class="hero-art"><img src="/candyai.webp" alt="Imagem ilustrativa da plataforma Candy.ai" width="1200" height="675" fetchpriority="high"><figcaption>Imagem já utilizada no catálogo SexyAI. A presença da imagem não representa teste do serviço.</figcaption></figure>
@@ -229,6 +230,7 @@
         link.removeAttribute('tabindex');
       });
       affiliateStatus.textContent='Maioridade confirmada nesta sessão. Os links afiliados estão disponíveis.';
+      affiliateStatus.hidden=false;
     }
     function activateGalleryVideos(){
       document.querySelectorAll('.video-frame video[data-video-src]').forEach(video=>{
