@@ -56,7 +56,7 @@
             <h1 id="page-title">Candy.ai: <span class="gradient">a imaginação dá o primeiro passo.</span></h1>
             <p class="hero-subheadline">Algumas conversas começam com curiosidade. Outras despertam muito mais.</p>
             <p class="lede">Descubra o universo de personagens virtuais da Candy.ai e conheça os recursos que a plataforma anuncia. O SexyAI mostra o que está documentado — e o que ainda não verificamos.</p>
-            <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Descubra a Candy.ai <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+            <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-cta-position="hero" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Descubra a Candy.ai <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
             <p class="affiliate-note">Link de afiliado*</p>
             <p class="affiliate-note" id="affiliateStatus" role="status" aria-live="polite" hidden></p>
             <noscript><p class="callout">JavaScript está desativado. As informações desta página continuam disponíveis, mas o link afiliado permanece inativo; não há destino navegável sem a confirmação 18+.</p></noscript>
@@ -199,7 +199,7 @@
     <section class="section" id="cta" aria-labelledby="cta-title">
       <div class="wrap">
         <h2 id="cta-title">A curiosidade trouxe você até aqui. E agora?</h2>
-        <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Explore a Candy.ai <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="candy-ai" data-cta-position="final" data-affiliate-href="https://t.vlmai-5.com/426715/7793?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Explore a Candy.ai <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       <p class="affiliate-note">Link de afiliado*</p>
       </div>
     </section>
@@ -252,7 +252,7 @@
     document.addEventListener('click',event=>{
       const link=event.target.closest('a[data-affiliate]');
       if(!link||!link.hasAttribute('href'))return;
-      window.dispatchEvent(new CustomEvent('sexyai:affiliate-click',{detail:{platform:link.dataset.affiliate,linkType:'affiliate'}}));
+      window.dispatchEvent(new CustomEvent('sexyai:affiliate-click',{detail:{platform:link.dataset.affiliate,linkType:'affiliate',ctaPosition:link.dataset.ctaPosition}}));
     });
 
     // GA4 é carregado somente após consentimento válido para análise.
@@ -377,9 +377,9 @@
     window.addEventListener('sexyai:affiliate-click',event=>{
       if(!analyticsPermitted||window['ga-disable-'+GA_MEASUREMENT_ID])return;
       const detail=event.detail||{};
-      const platform=String(detail.platform||'').slice(0,80);
-      if(!/^[a-z0-9-]+$/i.test(platform))return;
-      sendGa('event','affiliate_click',{platform_name:platform,link_type:'affiliate'});
+      const platform=String(detail.platform||'').slice(0,80),ctaPosition=String(detail.ctaPosition||'').slice(0,16);
+      if(!/^[a-z0-9-]+$/i.test(platform)||!/^(hero|final)$/.test(ctaPosition))return;
+      sendGa('event','affiliate_click',{platform_name:platform,link_type:'affiliate',cta_position:ctaPosition});
     });
     document.getElementById('acceptAll').addEventListener('click',()=>saveConsent(true));
     document.getElementById('rejectOptional').addEventListener('click',()=>saveConsent(false));

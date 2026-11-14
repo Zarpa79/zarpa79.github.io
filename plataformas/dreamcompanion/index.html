@@ -38,7 +38,7 @@
       <h1 id="page-title">DreamCompanion: <span class="gradient">imagine os detalhes. Descubra as possibilidades.</span></h1>
       <p class="hero-subheadline">Alguns personagens você encontra. Outros, começa a criar.</p>
       <p class="lede">Explore o universo de personagens virtuais e as opções de criação apresentadas pela DreamCompanion. Conheça os recursos anunciados para conversas e mídias, as condições de acesso e o que os documentos oficiais esclarecem. O SexyAI não testou a plataforma.</p>
-      <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="dreamcompanion" data-affiliate-href="https://t.vlmai-5.com/426715/8275?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Descubra a DreamCompanion <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      <p><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="dreamcompanion" data-cta-position="hero" data-affiliate-href="https://t.vlmai-5.com/426715/8275?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Descubra a DreamCompanion <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       <p class="affiliate-note">Link de afiliado*</p>
       <p class="affiliate-note" id="affiliateStatus" role="status" aria-live="polite" hidden></p>
     </div><figure class="hero-art"><img src="/mydreamcompanion.webp" alt="Imagem DreamCompanion já utilizada no catálogo SexyAI" width="600" height="338" fetchpriority="high"><figcaption>Imagem do catálogo SexyAI; não representa teste independente.</figcaption></figure></div></section>
@@ -125,7 +125,7 @@
 
   <section class="section" id="cta" aria-labelledby="cta-title"><div class="wrap">
     <h2 id="cta-title">Toda criação começa com uma escolha.</h2>
-    <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="dreamcompanion" data-affiliate-href="https://t.vlmai-5.com/426715/8275?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Explore a DreamCompanion <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    <p><a class="btn" id="affiliateCta" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="dreamcompanion" data-cta-position="final" data-affiliate-href="https://t.vlmai-5.com/426715/8275?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Explore a DreamCompanion <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       <p class="affiliate-note">Link de afiliado*</p>
     <noscript><p class="callout">JavaScript está desativado. O conteúdo permanece disponível, mas os vídeos e o link afiliado ficam inativos sem confirmação 18+.</p></noscript>
   </div></section>
@@ -143,7 +143,7 @@
     if(ageConfirmed){activateAffiliateLinks();activateGalleryVideos()}
     document.getElementById('ageYes').addEventListener('click',()=>{try{sessionStorage.setItem('sexyai_age_confirmed','yes')}catch{}ageGate.style.display='none';activateAffiliateLinks();activateGalleryVideos()});
     document.getElementById('ageNo').addEventListener('click',()=>window.location.replace('/'));
-    document.addEventListener('click',event=>{const link=event.target.closest('a[data-affiliate]');if(!link||!link.hasAttribute('href'))return;window.dispatchEvent(new CustomEvent('sexyai:affiliate-click',{detail:{platform:link.dataset.affiliate,linkType:'affiliate'}}))});
+    document.addEventListener('click',event=>{const link=event.target.closest('a[data-affiliate]');if(!link||!link.hasAttribute('href'))return;window.dispatchEvent(new CustomEvent('sexyai:affiliate-click',{detail:{platform:link.dataset.affiliate,linkType:'affiliate',ctaPosition:link.dataset.ctaPosition}}))});
     // O GA4 só é carregado após consentimento válido para análise.
     const GA_MEASUREMENT_ID='G-KEECG0FZ0K';
     const CONSENT_POLICY_VERSION='1.0';
@@ -169,7 +169,7 @@
     const savedConsent=readConsent();if(!savedConsent){banner.style.display='block';revokeAnalytics()}else if(savedConsent.analytics)enableAnalytics();
     function saveConsent(analyticsAllowed){const record={essential:true,analytics:!!analyticsAllowed,updatedAt:new Date().toISOString(),policyVersion:CONSENT_POLICY_VERSION};try{localStorage.setItem('sexyai_privacy_consent',JSON.stringify(record))}catch{}banner.style.display='none';window.dispatchEvent(new CustomEvent('sexyai:privacy-consent',{detail:record}))}
     window.addEventListener('sexyai:privacy-consent',event=>{if(!validConsent(event.detail)||!event.detail.analytics)revokeAnalytics();else enableAnalytics()});
-    window.addEventListener('sexyai:affiliate-click',event=>{if(!analyticsPermitted||window['ga-disable-'+GA_MEASUREMENT_ID])return;const detail=event.detail||{},platform=String(detail.platform||'').slice(0,80);if(!/^[a-z0-9-]+$/i.test(platform))return;sendGa('event','affiliate_click',{platform_name:platform,link_type:'affiliate'})});
+    window.addEventListener('sexyai:affiliate-click',event=>{if(!analyticsPermitted||window['ga-disable-'+GA_MEASUREMENT_ID])return;const detail=event.detail||{},platform=String(detail.platform||'').slice(0,80),ctaPosition=String(detail.ctaPosition||'').slice(0,16);if(!/^[a-z0-9-]+$/i.test(platform)||!/^(hero|final)$/.test(ctaPosition))return;sendGa('event','affiliate_click',{platform_name:platform,link_type:'affiliate',cta_position:ctaPosition})});
     document.getElementById('acceptAll').addEventListener('click',()=>saveConsent(true));document.getElementById('rejectOptional').addEventListener('click',()=>saveConsent(false));document.getElementById('customizeCookies').addEventListener('click',()=>{settings.style.display=settings.style.display==='block'?'none':'block';analytics.checked=!!readConsent()?.analytics});document.getElementById('saveCookiePrefs').addEventListener('click',()=>saveConsent(analytics.checked));document.getElementById('privacySettings').addEventListener('click',()=>{banner.style.display='block';settings.style.display='block';analytics.checked=!!readConsent()?.analytics;banner.scrollIntoView({behavior:'smooth',block:'end'})});
   </script>
 </body>
