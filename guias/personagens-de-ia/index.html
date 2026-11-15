@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09080d">
+  <link rel="icon" href="/favicon.ico">
+  <title>Personagens de IA: como criar e conversar | SexyAI</title>
+  <meta name="description" content="Descubra como criar personagens de IA, definir personalidades e inventar histórias interativas. Veja dicas, exemplos de prompts e cuidados com privacidade.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://sexyai.com.br/guias/personagens-de-ia/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="SexyAI">
+  <meta property="og:url" content="https://sexyai.com.br/guias/personagens-de-ia/">
+  <meta property="og:title" content="Personagens de IA: como criar e conversar | SexyAI">
+  <meta property="og:description" content="Descubra como criar personagens de IA, definir personalidades e inventar histórias interativas. Veja dicas, exemplos de prompts e cuidados com privacidade.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Personagens de IA: como criar e conversar | SexyAI">
+  <meta name="twitter:description" content="Descubra como criar personagens de IA, definir personalidades e inventar histórias interativas. Veja dicas, exemplos de prompts e cuidados com privacidade.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sexyai.com.br/#organization","name":"SexyAI","url":"https://sexyai.com.br/"},{"@type":"Article","@id":"https://sexyai.com.br/guias/personagens-de-ia/#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://sexyai.com.br/guias/personagens-de-ia/"},"headline":"Personagens de IA: crie histórias e conversas do seu jeito","description":"Descubra como criar personagens de IA, definir personalidades e inventar histórias interativas. Veja dicas, exemplos de prompts e cuidados com privacidade.","inLanguage":"pt-BR","articleSection":"Guia editorial","publisher":{"@id":"https://sexyai.com.br/#organization"}}]}</script>
+  <style>
+    :root{--bg:#09080d;--panel:#121019;--text:#f8f5fb;--muted:#aaa3b4;--line:rgba(255,255,255,.09);--pink:#fa4b9b;--violet:#a56cff;--max:920px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:radial-gradient(ellipse at 78% -8%,rgba(137,68,181,.2),transparent 38%),var(--bg);color:var(--text);font:16px/1.7 Arial,Helvetica,sans-serif}a{color:#ff9bc7;text-underline-offset:3px}a:hover{color:#fff}a:focus-visible,button:focus-visible{outline:3px solid #ffd0e6;outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(9,8,13,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font:800 1.45rem Arial,Helvetica,sans-serif;letter-spacing:-.07em;color:var(--text);text-decoration:none;white-space:nowrap}.logo span{color:var(--pink)}.navlinks{display:flex;align-items:center;gap:20px;font-size:.9rem}.navlinks a{color:#c9c2d0}
+    .crumbs{display:flex;flex-wrap:wrap;gap:9px;margin:34px 0 22px;color:var(--muted);font-size:.82rem}.crumbs a{color:#c9c2d0}.eyebrow{color:#f28bc0;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.article{padding:28px 0 64px}.article-head{padding:18px 0 30px;border-bottom:1px solid var(--line)}h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.06;letter-spacing:-.06em;margin:12px 0 18px}.article-lede{max-width:760px;color:#e6dce9;font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:600;line-height:1.45;margin:0}
+    .article-copy{max-width:780px;margin:0 auto;padding-top:20px}.article-copy h2{font-size:clamp(1.65rem,3.6vw,2.3rem);line-height:1.15;letter-spacing:-.045em;margin:48px 0 16px}.article-copy h3{font-size:1.2rem;line-height:1.3;letter-spacing:-.02em;margin:30px 0 10px}.article-copy p,.article-copy li{color:#c5bdcd}.article-copy p{margin:0 0 20px}.article-copy strong{color:#fff}.article-link{padding:12px 16px;border:1px solid rgba(255,155,199,.28);border-radius:12px;background:rgba(250,75,155,.06)}.article-link a{font-weight:700}.article-disclosure{margin-top:38px!important;padding:18px 20px;border:1px solid rgba(230,73,165,.22);background:rgba(230,73,165,.055);border-radius:15px;font-size:.9rem}
+    .footer{border-top:1px solid var(--line);padding:32px 0 28px;color:#8f8798;font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer p{margin:9px 0}.footer-links{display:flex;gap:14px 18px;flex-wrap:wrap;align-items:center}.privacy-link{background:none;border:0;color:#ff9bc7;text-decoration:underline;cursor:pointer;padding:0;font:inherit}
+    .cookie-banner{position:fixed;z-index:110;left:20px;right:20px;bottom:20px;max-width:760px;margin:auto;padding:22px;background:#17131f;border:1px solid rgba(255,255,255,.18);border-radius:18px;box-shadow:0 18px 70px #000b;display:none}.cookie-banner h3{font-size:1.08rem;line-height:1.3;letter-spacing:-.02em;margin:0}.cookie-banner p{color:#c4bdcc;font-size:.88rem;margin:8px 0 16px}.cookie-actions{display:flex;gap:9px;flex-wrap:wrap}.cookie-actions button{border-radius:999px;padding:10px 15px;border:1px solid var(--line);cursor:pointer;font-weight:700;font-size:.82rem}.cookie-primary{background:linear-gradient(110deg,var(--pink),#bd5cff);color:#fff;border:0!important}.cookie-secondary{background:transparent;color:#eee}.cookie-settings{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:#ddd}.cookie-settings label{display:flex;gap:10px;align-items:center;margin:8px 0;font-size:.86rem}.cookie-settings input{accent-color:#e64a9d}
+    .age-gate{position:fixed;inset:0;background:rgba(4,3,7,.92);backdrop-filter:blur(14px);z-index:120;display:none;place-items:center;padding:20px}.age-box{width:min(440px,100%);text-align:center;padding:30px;border:1px solid var(--line);border-radius:22px;background:#15111c;box-shadow:0 25px 90px #000}.age-box h2{font-size:1.65rem;margin:10px 0}.age-box p{color:var(--muted);font-size:.9rem}.age-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}.age-actions button{padding:11px 17px;border-radius:999px;border:1px solid var(--line);cursor:pointer}.age-yes{background:linear-gradient(110deg,var(--pink),#bd5cff);color:#fff;border:0!important;font-weight:700}.age-no{background:transparent;color:#ddd}
+    .article-note{margin:24px 0;padding:18px 20px;border:1px solid rgba(230,73,165,.22);border-left:3px solid var(--pink);background:rgba(230,73,165,.055);border-radius:0 14px 14px 0;color:#c5bdcd}.article-note p{margin:0}.article-note strong{color:#fff}.article-table-wrap{max-width:100%;overflow-x:auto;margin:26px 0;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.article-table-wrap:focus-visible{outline:3px solid #ffd0e6;outline-offset:4px}.article-table{width:100%;min-width:680px;border-collapse:collapse;text-align:left;font-size:.9rem}.article-table th,.article-table td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}.article-table th{color:#fff;font-weight:700}.article-table td{color:#c5bdcd}.article-table tbody tr:last-child td{border-bottom:0}
+    @media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{min-height:64px;align-items:flex-start;padding:15px 0;flex-direction:column;gap:10px}.navlinks{gap:14px;font-size:.82rem;flex-wrap:wrap}.crumbs{margin:24px 0 16px}.article{padding-top:12px}.article-head{padding-bottom:24px}.article-copy h2{margin-top:38px}.article-copy h3{margin-top:25px}.cookie-banner{left:10px;right:10px;bottom:10px;padding:17px}.cookie-actions button{flex:1 1 auto}.footer-inner{display:block}.footer-links{margin-top:17px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap nav"><a class="logo" href="/" aria-label="SexyAI — página inicial">sexy<span>AI</span>.</a><nav class="navlinks" aria-label="Navegação principal"><a href="/#plataformas">Plataformas</a><a href="/sobre.html">Sobre o SexyAI</a></nav></div></header>
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Trilha de navegação"><a href="/">Início</a><span aria-hidden="true">›</span><span aria-current="page">Guia editorial</span></nav>
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-head"><div class="eyebrow">Guia editorial · Conteúdo 18+</div>
+        <h1 id="article-title">Personagens de IA: crie histórias e conversas do seu jeito</h1>
+        <p class="article-lede"><em>E se você pudesse inventar alguém do zero — e descobrir o que essa pessoa imaginária teria a dizer?</em></p>
+      </header>
+      <div class="article-copy">
+        <p>Uma personalidade misteriosa, um par romântico de ficção, uma viajante do futuro ou alguém que parece ter saído de um romance. Com personagens de inteligência artificial, a conversa deixa de ser apenas uma troca de perguntas e respostas: pode virar uma história que você ajuda a escrever.</p>
+        <p>O segredo não está em encontrar a personagem “perfeita”. Está em dar a ela uma identidade interessante, escolher o cenário e deixar espaço para o inesperado.</p>
+        <p>Neste guia, você vai aprender a criar personagens de IA, desenvolver conversas mais envolventes e explorar plataformas especializadas, sem confundir ficção interativa com relacionamentos humanos.</p>
+        <h2>O que são personagens de IA?</h2>
+        <p>Personagens de IA são identidades fictícias com as quais você interage por meio de um sistema de inteligência artificial. Em algumas plataformas, você escolhe atributos como nome, aparência, personalidade e estilo de conversa. Em outras, começa com uma personagem pronta e adapta o rumo da interação.</p>
+        <p>A experiência pode lembrar um jogo narrativo, um exercício de escrita criativa ou uma conversa descontraída. O resultado depende tanto dos recursos da plataforma quanto das instruções que você fornece.</p>
+        <p><strong>Importante:</strong> uma personagem pode simular emoções, lembranças e preferências em uma conversa, mas isso não significa que tenha sentimentos, consciência ou uma relação real com você.</p>
+        <h2>Antes da primeira mensagem: escolha o tipo de experiência</h2>
+        <p>Uma boa personagem começa com uma ideia clara. Você quer criar uma história romântica? Um mistério? Uma aventura? Ou simplesmente conversar com uma personalidade bem-humorada?</p>
+        <h3>Para quem gosta de romance e química</h3>
+        <p>Imagine uma personagem adulta, confiante e espirituosa, que prefere provocações inteligentes a respostas previsíveis. O cenário pode ser um café, uma viagem ou um encontro fictício entre duas pessoas que ainda não se conhecem.</p>
+        <h3>Para quem prefere aventuras</h3>
+        <p>Uma arqueóloga que encontrou um mapa impossível. Um piloto perdido em uma cidade futurista. Uma detetive que precisa de ajuda para decifrar uma mensagem. O objetivo aqui é construir uma narrativa compartilhada.</p>
+        <h3>Para quem quer conversas criativas</h3>
+        <p>Crie uma escritora sarcástica, um músico boêmio ou uma personagem que adora debates sobre cinema. Não é necessário transformar tudo em romance: uma personalidade interessante já sustenta muitas conversas.</p>
+        <h2>Como criar um personagem de IA em cinco passos</h2>
+        <h3>1. Dê uma identidade à personagem</h3>
+        <p>Escolha nome, faixa etária adulta, ocupação fictícia e uma característica marcante. Evite acumular dezenas de detalhes logo no início: poucos traços bem definidos são mais fáceis de manter consistentes.</p>
+        <p><strong>Exemplo:</strong> “Lia, 29 anos, fotógrafa de viagens, curiosa, independente e apaixonada por cidades antigas.”</p>
+        <h3>2. Defina uma personalidade com contrastes</h3>
+        <p>Personagens interessantes não precisam ser previsíveis. Uma pessoa pode ser extrovertida em público e reservada quando fala de sentimentos. Pode ter humor ácido, mas ser cuidadosa com quem confia.</p>
+        <p><strong>Exemplo:</strong> “Lia é espontânea e irônica, mas se torna séria quando alguém fala de seus sonhos.”</p>
+        <h3>3. Escolha o cenário</h3>
+        <p>O cenário oferece assunto e direção. Uma conversa em uma livraria durante uma tempestade tende a seguir um caminho diferente de um diálogo a bordo de uma nave espacial.</p>
+        <p><strong>Exemplo:</strong> “Nós nos conhecemos por acaso em uma pequena livraria de Lisboa. Chove lá fora e a loja está prestes a fechar.”</p>
+        <h3>4. Combine o tom da conversa</h3>
+        <p>Você prefere diálogos curtos, descrições cinematográficas, humor, mistério ou romance gradual? Explique isso desde o início. Quando a plataforma permitir, registre essas preferências na configuração da personagem.</p>
+        <p><strong>Exemplo:</strong> “Responda com naturalidade, use humor sutil, evite discursos longos e faça a história avançar aos poucos.”</p>
+        <h3>5. Ajuste conforme a história evolui</h3>
+        <p>Se a personagem ficar repetitiva, acrescente um conflito, um objetivo ou uma nova informação. Se perder a coerência, recapitule os fatos importantes. A capacidade de manter contexto varia entre serviços e planos.</p>
+        <h2>Três prompts para começar uma história</h2>
+        <p>Use os exemplos como ponto de partida. Adapte nomes, lugares e estilos à sua preferência.</p>
+        <h3>Prompt 1 — Um encontro inesperado</h3>
+        <blockquote class="article-note"><p>Você interpreta Marina, uma personagem fictícia adulta, inteligente, bem-humorada e apaixonada por fotografia. Estamos em uma cafeteria quase vazia, durante uma chuva forte. Você percebe que estamos lendo o mesmo livro. Comece a conversa de maneira espontânea, sem revelar tudo sobre sua personalidade de uma vez. Mantenha o diálogo natural e faça perguntas quando fizer sentido.</p></blockquote>
+        <h3>Prompt 2 — Mistério em uma cidade antiga</h3>
+        <blockquote class="article-note"><p>Você interpreta Alex, uma personagem fictícia adulta que trabalha como pesquisadora de história. Encontramos uma carta sem assinatura em um hotel antigo. Crie uma narrativa interativa de mistério, apresente pistas aos poucos e deixe que minhas decisões influenciem os próximos acontecimentos. Não resolva o enigma imediatamente.</p></blockquote>
+        <h3>Prompt 3 — Uma conversa com personalidade</h3>
+        <blockquote class="article-note"><p>Você interpreta Nina, uma personagem fictícia adulta, roteirista de cinema, curiosa e dona de um humor irônico. Quero uma conversa leve sobre filmes, viagens e ideias improváveis. Responda de forma espontânea, com mensagens relativamente curtas, e não concorde comigo automaticamente.</p></blockquote>
+        <h2>O que torna uma conversa realmente envolvente?</h2>
+        <p>A resposta curta: <strong>participação</strong>. Uma história ganha vida quando você também contribui.</p>
+        <p>Em vez de perguntar apenas “Como foi seu dia?”, experimente “Qual foi a decisão mais impulsiva que sua personagem tomou?”. Em vez de pedir “Conte uma história”, proponha “Você encontra uma fotografia sua em um lugar onde nunca esteve. O que faz?”.</p>
+        <p>Outra técnica é oferecer escolhas: “Podemos investigar o bilhete agora ou esperar até amanhecer. O que você prefere?”. Isso cria movimento e ajuda a evitar diálogos que giram em círculos.</p>
+        <p>Se a personagem esquecer detalhes ou mudar de comportamento, não encare isso como um defeito pessoal dela. Sistemas de IA podem apresentar inconsistências, especialmente em conversas longas. Uma breve recapitulação costuma ajudar.</p>
+        <h2>Onde explorar personagens de IA?</h2>
+        <p>O SexyAI reúne análises de plataformas voltadas a conversas e personagens virtuais. A disponibilidade de recursos como criação de personagens, imagens, voz, memória e personalização depende do serviço e pode variar com o plano contratado.</p>
+        <ul><li><strong><a href="/plataformas/candy-ai/">Candy.ai</a>:</strong> consulte nossa análise para conhecer a proposta da plataforma e seus recursos de interação.</li><li><strong><a href="/plataformas/ourdream-ai/">OurDream AI</a>:</strong> explore a análise e veja como a plataforma apresenta experiências com personagens virtuais.</li><li><strong><a href="/plataformas/lovescape/">Lovescape</a>:</strong> conheça a proposta do serviço e avalie se combina com o tipo de personagem que você procura.</li><li><strong><a href="/plataformas/secrets-ai/">Secrets AI</a>:</strong> confira a análise antes de escolher uma experiência.</li></ul>
+        <p><strong>Nota editorial:</strong> Este guia não apresenta uma classificação de desempenho nem afirma ter testado recursos pagos.</p>
+        <p>Se você ainda está comparando opções, leia também <strong><a href="/guias/melhores-ias-para-conversar/">Melhores IAs para conversar: descubra qual combina com você</a></strong>. Para explorar a criação de uma companhia fictícia, veja <strong><a href="/guias/criar-namorada-virtual-ia/">Namorada virtual com IA: como criar a companhia ideal para você</a></strong>.</p>
+        <h2>Personagens de IA são gratuitos?</h2>
+        <p>Algumas plataformas podem permitir acesso inicial ou oferecer recursos limitados sem assinatura. Entretanto, limites de mensagens, personalização, imagens, voz e preços podem mudar. Antes de criar uma conta ou contratar um plano, confira as condições diretamente no serviço.</p>
+        <p>Não é necessário pagar para começar a imaginar uma personagem: você pode primeiro escrever sua ficha de identidade e seus prompts. A escolha de uma plataforma vem depois.</p>
+        <h2>Privacidade: fantasia livre, dados pessoais protegidos</h2>
+        <p>Uma conversa fictícia não precisa incluir informações reais. Evite compartilhar senhas, documentos, endereço, dados financeiros ou detalhes íntimos identificáveis. Leia as políticas de privacidade e as condições de armazenamento de mensagens da plataforma escolhida.</p>
+        <p>Também vale separar a ficção da vida cotidiana. Personagens de IA podem ser uma forma de entretenimento e expressão criativa, mas não substituem relações humanas nem atendimento profissional quando necessário.</p>
+        <p>O SexyAI é destinado a <strong>maiores de 18 anos</strong>. Use essas experiências com respeito, dentro das regras de cada plataforma, e crie somente personagens adultos em contextos românticos ou sensuais.</p>
+        <h2>Perguntas frequentes</h2>
+        <h3>Posso criar uma personagem com personalidade própria?</h3>
+        <p>Em plataformas que oferecem personalização, geralmente é possível definir características e preferências de interação. A extensão dessas opções depende do serviço.</p>
+        <h3>A personagem lembra de tudo o que conversamos?</h3>
+        <p>Não necessariamente. A retenção de contexto e os recursos de memória variam entre plataformas, modelos e planos. Para histórias longas, pode ser útil resumir os acontecimentos anteriores.</p>
+        <h3>Preciso saber escrever prompts complicados?</h3>
+        <p>Não. Comece com quatro informações: quem é a personagem, como ela se comporta, onde a história acontece e qual tom você deseja. Depois, ajuste conforme a conversa.</p>
+        <h3>Posso usar personagens de IA para escrever ficção?</h3>
+        <p>Sim, como ferramenta de brainstorming e experimentação narrativa. Revise os resultados e confira os termos de uso da plataforma antes de publicar ou comercializar conteúdo gerado.</p>
+        <h3>Como escolher a plataforma certa?</h3>
+        <p>Considere o tipo de conversa, as opções de personalização, o idioma, os limites de uso, o custo e a privacidade. Nosso <strong><a href="/guias/melhores-ias-para-conversar/">guia de IAs para conversar</a></strong> ajuda a organizar essa comparação.</p>
+        <h2>Sua próxima história começa com uma ideia</h2>
+        <p>Uma personagem memorável não precisa de uma biografia de vinte páginas. Às vezes, basta um detalhe intrigante, uma boa primeira frase e a liberdade de deixar a história seguir por caminhos inesperados.</p>
+        <p>Escolha uma personalidade, imagine um cenário e experimente. Afinal, a melhor parte de uma conversa criativa talvez seja descobrir algo que você ainda não tinha pensado em perguntar.</p>
+        <p><strong><a href="/#plataformas">Explore as plataformas analisadas pelo SexyAI</a></strong> e encontre um ponto de partida para sua próxima história.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><a class="logo" href="/" aria-label="SexyAI — página inicial">sexy<span>AI</span>.</a><p>Guia editorial independente sobre plataformas de IA. Conteúdo destinado a maiores de 18 anos.</p><p>© SexyAI</p></div><nav class="footer-links" aria-label="Políticas e informações"><a href="/sobre.html">Sobre</a><a href="/politica-de-privacidade.html">Privacidade</a><a href="/termos-de-uso.html">Termos de uso</a><a href="/politica-de-afiliados.html">Política de afiliados</a><a href="/politica-de-cookies.html">Cookies</a><button class="privacy-link" id="privacySettings" type="button">Preferências de privacidade</button></nav></div></footer>
+  <section class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieTitle" aria-describedby="cookieText"><div class="eyebrow">Privacidade e transparência</div><h3 id="cookieTitle">Você escolhe como seus dados são utilizados.</h3><p id="cookieText">O armazenamento essencial mantém funções básicas; a análise é opcional e só será ativada com sua autorização. Consulte a <a href="/politica-de-cookies.html">Política de Cookies</a> e a <a href="/politica-de-privacidade.html">Política de Privacidade</a>.</p><div class="cookie-actions"><button class="cookie-primary" id="acceptAll" type="button">Aceitar análise</button><button class="cookie-secondary" id="rejectOptional" type="button">Rejeitar análise</button><button class="cookie-secondary" id="customizeCookies" type="button">Configurar</button></div><div class="cookie-settings" id="cookieSettings"><label><input type="checkbox" checked disabled> Essenciais — necessários ao funcionamento</label><label><input type="checkbox" id="analyticsConsent"> Análise — métricas de utilização (opcional)</label><div class="cookie-actions"><button class="cookie-primary" id="saveCookiePrefs" type="button">Salvar preferências</button></div></div></section>
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle"><div class="age-box"><div class="eyebrow">Acesso restrito</div><h2 id="ageTitle">Você tem 18 anos ou mais?</h2><p>Esta página aborda serviços destinados a adultos. Ao continuar, você declara ter pelo menos 18 anos ou a maioridade legal em sua região.</p><div class="age-actions"><button class="age-yes" id="ageYes" type="button">Sim, tenho 18+</button><button class="age-no" id="ageNo" type="button">Não tenho</button></div></div></div>
+  <noscript><p class="wrap">JavaScript está desativado. O conteúdo editorial continua disponível, mas o painel de consentimento e a confirmação de maioridade exigem JavaScript.</p></noscript>
+  <script>
+    const ageGate=document.getElementById('ageGate');
+    let ageConfirmed=false;
+    try{ageConfirmed=sessionStorage.getItem('sexyai_age_confirmed')==='yes';if(!ageConfirmed)ageGate.style.display='grid'}catch{ageGate.style.display='grid'}
+    document.getElementById('ageYes').addEventListener('click',()=>{try{sessionStorage.setItem('sexyai_age_confirmed','yes')}catch{}ageGate.style.display='none'});
+    document.getElementById('ageNo').addEventListener('click',()=>window.location.replace('https://www.google.com/'));
+    // O GA4 só é carregado após consentimento válido para análise.
+    const GA_MEASUREMENT_ID='G-KEECG0FZ0K';
+    const CONSENT_POLICY_VERSION='1.0';
+    let analyticsPermitted=false,gaScriptLoaded=false,gaScriptRequested=false,gaConfigQueued=false,pageViewQueued=false,gaPendingCommands=[];
+    window['ga-disable-'+GA_MEASUREMENT_ID]=true;
+    function validConsent(record){
+      if(!record||typeof record!=='object'||Array.isArray(record)||record.essential!==true||typeof record.analytics!=='boolean'||typeof record.updatedAt!=='string'||record.policyVersion!==CONSENT_POLICY_VERSION)return false;
+      const match=record.updatedAt.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d{1,9})?(Z|[+-]\d{2}:\d{2})$/i);if(!match)return false;
+      const [,year,month,day,hour,minute,second,zone]=match.map((value,index)=>index===7?value:Number(value));
+      const daysInMonth=new Date(Date.UTC(year,month,0)).getUTCDate();if(month<1||month>12||day<1||day>daysInMonth||hour>23||minute>59||second>59)return false;
+      if(zone!=='Z'&&zone!=='z'){const offset=zone.slice(1).split(':').map(Number);if(offset[0]>23||offset[1]>59)return false}
+      const timestamp=Date.parse(record.updatedAt);return Number.isFinite(timestamp)&&timestamp<=Date.now();
+    }
+    function readConsent(){try{const value=JSON.parse(localStorage.getItem('sexyai_privacy_consent')||'null');return validConsent(value)?value:null}catch{return null}}
+    function clearGaCookies(){const names=document.cookie.split(';').map(part=>part.trim().split('=')[0]).filter(name=>/^_(ga|gid|gat)(_|$)/.test(name));const host=location.hostname;const domains=[host];if(host&&host.indexOf('.')!==-1&&!/^\d+(?:\.\d+){3}$/.test(host)&&host.indexOf(':')===-1){domains.push('.'+host);const labels=host.split('.');if(labels.length>2)domains.push('.'+labels.slice(-2).join('.'))}for(const name of new Set(names))for(const path of ['/',''])for(const domain of new Set(domains))document.cookie=name+'=; Max-Age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; path='+path+(domain?'; domain='+domain:'')+'; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'')}
+    function queueGa(){const command=arguments;if(gaScriptLoaded)window.gtag.apply(null,command);else{window.dataLayer.push(command);gaPendingCommands.push(command)}return command}
+    function sendGa(){if(!analyticsPermitted||!gaScriptRequested||window['ga-disable-'+GA_MEASUREMENT_ID])return;return queueGa.apply(null,arguments)}
+    function removePendingGaCommands(){if(gaScriptLoaded||!gaPendingCommands.length)return;const pending=new Set(gaPendingCommands);const discardedPageView=gaPendingCommands.some(command=>command[0]==='event'&&command[1]==='page_view');window.dataLayer=window.dataLayer.filter(command=>!pending.has(command));gaPendingCommands=[];gaConfigQueued=false;if(discardedPageView)pageViewQueued=false}
+    function loadGaScript(){if(gaScriptRequested)return;gaScriptRequested=true;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(GA_MEASUREMENT_ID);script.onload=()=>{gaScriptLoaded=true;gaPendingCommands=[];if(!analyticsPermitted||window['ga-disable-'+GA_MEASUREMENT_ID])window.gtag('consent','update',{analytics_storage:'denied'})};script.onerror=()=>{gaScriptRequested=false;gaScriptLoaded=false;removePendingGaCommands();analyticsPermitted=false;window['ga-disable-'+GA_MEASUREMENT_ID]=true};document.head.appendChild(script)}
+    function enableAnalytics(){if(analyticsPermitted)return;analyticsPermitted=true;window['ga-disable-'+GA_MEASUREMENT_ID]=false;if(!window.dataLayer)window.dataLayer=[];if(!window.gtag)window.gtag=function(){window.dataLayer.push(arguments)};queueGa('consent','update',{analytics_storage:'granted'});if(!gaConfigQueued){queueGa('js',new Date());queueGa('config',GA_MEASUREMENT_ID,{send_page_view:false});gaConfigQueued=true}if(!pageViewQueued){queueGa('event','page_view',{page_title:document.title,page_location:location.href,page_path:location.pathname+location.search});pageViewQueued=true}loadGaScript()}
+    function revokeAnalytics(){analyticsPermitted=false;window['ga-disable-'+GA_MEASUREMENT_ID]=true;removePendingGaCommands();if(gaScriptLoaded&&typeof window.gtag==='function')window.gtag('consent','update',{analytics_storage:'denied'});clearGaCookies()}
+    const banner=document.getElementById('cookieBanner'),settings=document.getElementById('cookieSettings'),analytics=document.getElementById('analyticsConsent');
+    const savedConsent=readConsent();if(!savedConsent){banner.style.display='block';revokeAnalytics()}else if(savedConsent.analytics)enableAnalytics();
+    function saveConsent(analyticsAllowed){const record={essential:true,analytics:!!analyticsAllowed,updatedAt:new Date().toISOString(),policyVersion:CONSENT_POLICY_VERSION};try{localStorage.setItem('sexyai_privacy_consent',JSON.stringify(record))}catch{}banner.style.display='none';window.dispatchEvent(new CustomEvent('sexyai:privacy-consent',{detail:record}))}
+    window.addEventListener('sexyai:privacy-consent',event=>{if(!validConsent(event.detail)||!event.detail.analytics)revokeAnalytics();else enableAnalytics()});
+    document.getElementById('acceptAll').addEventListener('click',()=>saveConsent(true));document.getElementById('rejectOptional').addEventListener('click',()=>saveConsent(false));document.getElementById('customizeCookies').addEventListener('click',()=>{settings.style.display=settings.style.display==='block'?'none':'block';analytics.checked=!!readConsent()?.analytics});document.getElementById('saveCookiePrefs').addEventListener('click',()=>saveConsent(analytics.checked));document.getElementById('privacySettings').addEventListener('click',()=>{banner.style.display='block';settings.style.display='block';analytics.checked=!!readConsent()?.analytics;banner.scrollIntoView({behavior:'smooth',block:'end'})});
+  </script>
+</body>
+</html>
