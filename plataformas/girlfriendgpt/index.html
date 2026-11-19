@@ -31,7 +31,38 @@
     @media(max-width:600px){.gallery-grid{grid-template-columns:1fr}.wrap{width:min(var(--max),calc(100% - 28px))}.nav{height:64px}.navlinks{gap:13px;font-size:.78rem}.hero{padding:48px 0}.crumbs{margin-bottom:22px}.hero h1{font-size:2.65rem}.section{padding:38px 0}.grid-two{grid-template-columns:1fr}.cookie-banner{left:10px;right:10px;bottom:10px;padding:17px}.cookie-actions button{flex:1 1 auto}.footer-inner{display:block}.footer-links{margin-top:17px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   .cta-arrow{display:inline-block;width:16px;height:16px;margin-left:7px;vertical-align:-3px;flex:none}.btn{box-shadow:0 10px 32px rgba(231,66,157,.34),0 0 0 1px rgba(255,255,255,.12) inset}.btn:hover{filter:brightness(1.08);box-shadow:0 12px 36px rgba(231,66,157,.42),0 0 0 1px rgba(255,255,255,.2) inset}.btn:focus-visible{outline:3px solid #ffd0e6;outline-offset:4px}.footer-editorial-note{margin:8px 0;color:#aaa3b4;font-size:12px;font-weight:400;line-height:1.5;max-width:760px}.footer-affiliate-note{font-weight:400}
-  </style>
+
+    .decision-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:22px 0 16px}
+    .decision-item{grid-column:span 2;min-width:0;padding:18px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018))}
+    .decision-item:nth-child(4){grid-column:2/span 2;grid-row:2}
+    .decision-item:nth-child(5){grid-column:4/span 2;grid-row:2}
+    .decision-grid--four .decision-item:nth-child(4){grid-column:3/span 2;grid-row:2}
+    .decision-item h3{margin:2px 0 8px;color:var(--text);font-size:clamp(1.15rem,1.25vw,1.28rem);font-weight:700;line-height:1.2;letter-spacing:-.02em}
+    .decision-item p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.6}
+    .decision-item .status{font-size:.62rem;letter-spacing:.04em;color:#d1b6ca;border-color:rgba(250,75,155,.18);padding:3px 8px}
+    .decision-intro{max-width:800px;margin:-6px 0 0;color:var(--muted);font-size:1rem;line-height:1.65}
+    .compare-prompt{margin:18px 0 0;font-size:.92rem;font-weight:700}
+    .compare-prompt a{display:inline-flex;align-items:center;gap:8px}
+    .decision-cta{padding:38px 0;border-block:1px solid var(--line);background:linear-gradient(100deg,rgba(250,75,155,.08),rgba(165,108,255,.07))}
+    .decision-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .decision-cta h2{margin-bottom:10px}
+    .decision-cta .fine{margin:0}
+    .decision-cta-action{flex:0 0 auto}
+    .decision-cta-action .affiliate-note{margin-top:8px}
+    @media(max-width:800px){.decision-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.decision-item{grid-column:auto;grid-row:auto}.decision-item:nth-child(4),.decision-item:nth-child(5){grid-column:auto;grid-row:auto}.decision-grid--four .decision-item:nth-child(4){grid-column:auto;grid-row:auto}.decision-item:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc((100% - 12px)/2)}.decision-cta-inner{align-items:flex-start;flex-direction:column}.decision-cta-action{width:100%}}
+    @media(max-width:480px){.decision-grid{grid-template-columns:minmax(0,1fr)}.decision-item{grid-column:1/-1;grid-row:auto;min-width:0;width:auto;justify-self:stretch;padding:16px}.decision-item:last-child:nth-child(odd){grid-column:1/-1;justify-self:stretch;width:auto}.decision-cta{padding:30px 0}.decision-cta-action .btn{width:100%}}
+    @media(max-width:600px){
+      .resource-facts{display:block;width:100%;min-width:0;border-collapse:separate;border-spacing:0;background:transparent}
+      .resource-facts thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      .resource-facts tbody{display:grid;gap:12px}
+      .resource-facts tbody tr{display:block;width:100%;min-width:0;padding:16px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}
+      .resource-facts tbody td{display:block;width:100%;min-width:0;padding:0;border:0;overflow-wrap:anywhere}
+      .resource-facts tbody td:first-child{margin:0 0 8px;color:var(--text);font-size:1rem;font-weight:700;line-height:1.35}
+      .resource-facts tbody td:nth-child(2){margin:0 0 12px;color:var(--muted);font-size:.9rem;line-height:1.6}
+      .resource-facts tbody td:nth-child(3){padding-top:10px;border-top:1px solid var(--line);color:#ffabd0;font-size:.82rem;font-weight:700;line-height:1.5}
+      .resource-facts tbody td:nth-child(3)::before{content:"Status: ";color:#d1b6ca}
+    }
+</style>
 </head>
 <body>
   <header class="topbar"><div class="wrap nav"><a class="logo" href="/" aria-label="SexyAI — página inicial">sexy<span>AI</span>.</a><nav class="navlinks" aria-label="Navegação principal"><a href="/#plataformas">Plataformas</a><a href="/sobre.html">Sobre o SexyAI</a></nav></div></header>
@@ -48,6 +79,20 @@
         <p class="affiliate-note" id="affiliateStatus" role="status" aria-live="polite" hidden></p>
       </div><figure class="hero-art"><img src="/gptgirlfriend.webp" alt="Imagem do GirlfriendGPT usada no catálogo do SexyAI" width="600" height="338" fetchpriority="high"><figcaption>Imagem já utilizada no catálogo SexyAI; não representa teste ou validação independente.</figcaption></figure></div></section>
     </div>
+    <section class="section decision-section" aria-labelledby="decision-title"><div class="wrap">
+      <div class="eyebrow">Resumo para decidir</div>
+      <h2 id="decision-title">O que a GirlfriendGPT apresenta</h2>
+      <p class="decision-intro">Veja o que a GirlfriendGPT apresenta sobre conversas, criação e mídia, e quais limites ainda não foram confirmados na ficha.</p>
+      <div class="decision-grid">
+      <article class="decision-item"><span class="status">Declarado; não testado</span><h3>Chat e roleplay</h3><p>A página oficial apresenta conversas com personagens próprios e comunitários, além de cenários de roleplay.</p></article>
+      <article class="decision-item"><span class="status">Declarado; controles não testados</span><h3>Criação de personagens</h3><p>Site e termos mencionam criação; a página inicial anuncia opções de personalidade, voz e características.</p></article>
+      <article class="decision-item"><span class="status">Documentado; não testado</span><h3>Geração de imagens</h3><p>A empresa descreve imagens feitas por prompts; o gerador mostra opções de estilo e quantidade.</p></article>
+      <article class="decision-item"><span class="status">Exibido pela empresa; não testado</span><h3>Vídeo a partir de imagem</h3><p>O gerador exibe a opção de transformar imagem em vídeo; custos e elegibilidade não ficaram confirmados.</p></article>
+      <article class="decision-item"><span class="status">Declarado; não testado</span><h3>Chat por voz</h3><p>O site lista voz entre os recursos; a ficha não localizou limites ou requisitos completos.</p></article>
+      </div>
+      <p class="compare-prompt"><a href="/encontre-sua-ia/">Ainda está comparando? Veja alternativas no comparador do SexyAI <span aria-hidden="true">↗</span></a></p>
+    </div></section>
+
 
     <section class="section" id="galeria" aria-labelledby="gallery-title"><div class="wrap">
       <div class="eyebrow">Galeria</div>
@@ -76,15 +121,20 @@
 
     <section class="section" id="recursos" aria-labelledby="features-title"><div class="wrap">
       <h2 id="features-title">Uma conversa pode ter muitas possibilidades. Quais são anunciadas?</h2>
-      <div class="table-wrap"><table class="facts"><thead><tr><th scope="col">Recurso</th><th scope="col">O que a empresa informa</th><th scope="col">Status editorial</th></tr></thead><tbody>
-        <tr><td>Chat e roleplay</td><td>A página oficial apresenta conversas com personagens próprios e comunitários e cenários de roleplay.</td><td>Declarado; não testado</td></tr>
-        <tr><td>Criação de personagens</td><td>O site e os termos mencionam criar personagens; a página inicial anuncia opções de personalidade, voz e características.</td><td>Declarado; controles não testados</td></tr>
-        <tr><td>Geração de imagens</td><td>A empresa descreve imagens produzidas a partir de prompts de texto. A página do gerador mostra opções como estilo e quantidade de imagens.</td><td>Documentado; não testado</td></tr>
-        <tr><td>Vídeo a partir de imagem</td><td>A página oficial do gerador exibe uma opção para transformar imagem criada em vídeo; custos e elegibilidade não ficaram confirmados.</td><td>Exibido pela empresa; não testado</td></tr>
-        <tr><td>Chat por voz</td><td>O site oficial lista voz entre os recursos anunciados; não localizamos limites ou requisitos completos nas páginas consultadas.</td><td>Declarado; não testado</td></tr>
+      <div class="table-wrap"><table class="facts resource-facts" role="table"><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Recurso</th><th scope="col" role="columnheader">O que a empresa informa</th><th scope="col" role="columnheader">Status editorial</th></tr></thead><tbody role="rowgroup">
+        <tr role="row"><td role="cell">Chat e roleplay</td><td role="cell">A página oficial apresenta conversas com personagens próprios e comunitários e cenários de roleplay.</td><td role="cell">Declarado; não testado</td></tr>
+        <tr role="row"><td role="cell">Criação de personagens</td><td role="cell">O site e os termos mencionam criar personagens; a página inicial anuncia opções de personalidade, voz e características.</td><td role="cell">Declarado; controles não testados</td></tr>
+        <tr role="row"><td role="cell">Geração de imagens</td><td role="cell">A empresa descreve imagens produzidas a partir de prompts de texto. A página do gerador mostra opções como estilo e quantidade de imagens.</td><td role="cell">Documentado; não testado</td></tr>
+        <tr role="row"><td role="cell">Vídeo a partir de imagem</td><td role="cell">A página oficial do gerador exibe uma opção para transformar imagem criada em vídeo; custos e elegibilidade não ficaram confirmados.</td><td role="cell">Exibido pela empresa; não testado</td></tr>
+        <tr role="row"><td role="cell">Chat por voz</td><td role="cell">O site oficial lista voz entre os recursos anunciados; não localizamos limites ou requisitos completos nas páginas consultadas.</td><td role="cell">Declarado; não testado</td></tr>
       </tbody></table></div>
       <p class="fine">Descrições e interfaces promocionais indicam o que a empresa anuncia, mas não comprovam desempenho, disponibilidade contínua ou acesso em cada plano.</p>
     </div></section>
+    <section class="decision-cta" aria-labelledby="decision-cta-girlfriend-gpt"><div class="wrap decision-cta-inner">
+      <div><div class="eyebrow">Próximo passo</div><h2 id="decision-cta-girlfriend-gpt">Confira os detalhes diretamente na GirlfriendGPT</h2><p class="fine">Consulte os recursos e as condições apresentados pela plataforma antes de decidir.</p></div>
+      <div class="decision-cta-action"><a class="btn" target="_blank" rel="sponsored nofollow noopener noreferrer" data-affiliate="girlfriend-gpt" data-cta-position="resources" data-affiliate-href="https://t.vlmai-5.com/426715/7477?aff_sub5=SF_006OG000004lmDN" aria-disabled="true" tabindex="-1">Conhecer GirlfriendGPT <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3H3.5v9.5H13V10M8 2.5h5.5V8M13.2 2.8 7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><p class="affiliate-note">Link de afiliado*</p></div>
+    </div></section>
+
 
     <section class="section" id="precos" aria-labelledby="plans-title"><div class="wrap">
       <h2 id="plans-title">A conversa pode continuar. Conheça os limites.</h2>
@@ -146,7 +196,7 @@
     try{ageConfirmed=sessionStorage.getItem('sexyai_age_confirmed')==='yes';if(!ageConfirmed)ageGate.style.display='grid'}catch{ageGate.style.display='grid'}
     if(ageConfirmed){activateAffiliateLinks();activateGalleryImages()}
     document.getElementById('ageYes').addEventListener('click',()=>{try{sessionStorage.setItem('sexyai_age_confirmed','yes')}catch{}ageGate.style.display='none';activateAffiliateLinks();activateGalleryImages()});
-    document.getElementById('ageNo').addEventListener('click',()=>window.location.replace('https://www.google.com/'));
+    document.getElementById('ageNo').addEventListener('click',()=>window.location.replace('/'));
     document.addEventListener('click',event=>{const link=event.target.closest('a[data-affiliate]');if(!link||!link.hasAttribute('href'))return;window.dispatchEvent(new CustomEvent('sexyai:affiliate-click',{detail:{platform:link.dataset.affiliate,linkType:'affiliate',ctaPosition:link.dataset.ctaPosition}}))});
     // O GA4 só é carregado após consentimento válido para análise.
     const GA_MEASUREMENT_ID='G-KEECG0FZ0K';
@@ -173,7 +223,7 @@
     const savedConsent=readConsent();if(!savedConsent){banner.style.display='block';revokeAnalytics()}else if(savedConsent.analytics)enableAnalytics();
     function saveConsent(analyticsAllowed){const record={essential:true,analytics:!!analyticsAllowed,updatedAt:new Date().toISOString(),policyVersion:CONSENT_POLICY_VERSION};try{localStorage.setItem('sexyai_privacy_consent',JSON.stringify(record))}catch{}banner.style.display='none';window.dispatchEvent(new CustomEvent('sexyai:privacy-consent',{detail:record}))}
     window.addEventListener('sexyai:privacy-consent',event=>{if(!validConsent(event.detail)||!event.detail.analytics)revokeAnalytics();else enableAnalytics()});
-    window.addEventListener('sexyai:affiliate-click',event=>{if(!analyticsPermitted||window['ga-disable-'+GA_MEASUREMENT_ID])return;const detail=event.detail||{};const platform=String(detail.platform||'').slice(0,80),ctaPosition=String(detail.ctaPosition||'').slice(0,16);if(!/^[a-z0-9-]+$/i.test(platform)||!/^(hero|final)$/.test(ctaPosition))return;sendGa('event','affiliate_click',{platform_name:platform,link_type:'affiliate',cta_position:ctaPosition})});
+    window.addEventListener('sexyai:affiliate-click',event=>{if(!analyticsPermitted||window['ga-disable-'+GA_MEASUREMENT_ID])return;const detail=event.detail||{};const platform=String(detail.platform||'').slice(0,80),ctaPosition=String(detail.ctaPosition||'').slice(0,16);if(!/^[a-z0-9-]+$/i.test(platform)||!/^(hero|resources|final)$/.test(ctaPosition))return;sendGa('event','affiliate_click',{platform_name:platform,link_type:'affiliate',cta_position:ctaPosition})});
     document.getElementById('acceptAll').addEventListener('click',()=>saveConsent(true));document.getElementById('rejectOptional').addEventListener('click',()=>saveConsent(false));
     document.getElementById('customizeCookies').addEventListener('click',()=>{settings.style.display=settings.style.display==='block'?'none':'block';analytics.checked=!!readConsent()?.analytics});
     document.getElementById('saveCookiePrefs').addEventListener('click',()=>saveConsent(analytics.checked));
